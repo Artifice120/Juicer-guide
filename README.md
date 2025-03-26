@@ -9,6 +9,8 @@ singularity pull docker://aidenlab/juicer:latest
 ```
 This command should download a file named ```juicer-kasm_latest.sif``` in the current working directory.
 
+### Using Juicer as a sigularity image
+
 Once installed juicer commands can be executed in the image with either
 
 **Apptainer**
@@ -103,7 +105,22 @@ awk 'BEGIN{OFS="\t"}{print $1, $NF}' mygenome_myenzyme.txt > mygenome.chrom.size
 ```
 This command just prints the first ```$1``` and the last ```$NF``` field of each line definig the field seperator as a tab ```\t```
 
+### Allocating more memory to Juicer singularity image
 
+For larger genome it may be required to allocate more ram to the juicer singularity image. 
+This is for the most part done automatically exept for the final HiC file creation which uses pre-set java parameters.
+To change this add/export the following flags
+```
+export SINGULARITYENV_JAVA_OPTIONS="-Xmx500000m -Xms500000m"
+
+_JAVA_OPTIONS="-Xmx500000m -Xms500000m" singularity ...
+```
+In this example 500Gb of ram are being provided. 
+May need to be adjusted based on the RAM available on your system.
+
+> NOTE:
+> You may notice that there is no change to the JAVA_OPTIONS in the debug file
+> This is a bug, when you look at the temporary files the variable actually matches the new settings
   
   
 

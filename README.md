@@ -65,10 +65,10 @@ Command line options used :
   
 ### Preparing the site and size files
 
-Before running the main '''juicer.sh''' command the Restriction Enzyme site file as well as the chromosome size file need to be created 
+Before running the main ```juicer.sh``` command the Restriction Enzyme site file as well as the chromosome size file need to be created 
 
-**Before creating either of these there also has to be a directory named '''fastq/''' that contains all of your paired-end Hi-C reads**
-**The Files need to end in the suffix '''_R1.fastq''' or '''_R2.fastq''' depending on which end of the pair the file is.**
+**Before creating either of these there also has to be a directory named ```fastq/``` that contains all of your paired-end Hi-C reads**
+**The Files need to end in the suffix ```_R1.fastq``` or ```_R2.fastq``` depending on which end of the pair the file is.**
 **The final ```juicer.sh``` command should be run in the direcory containing the directory ```fastq/```**
 
 Run the follwing command in the singularity shell (Change the path to wherever you have your container saved )

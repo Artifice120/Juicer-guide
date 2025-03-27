@@ -45,7 +45,7 @@ apptainer exec -B $PWD -B /lustre/isaac/scratch/madler5/blue_pandora_seq/Genome_
 Command line options used :
 - y : path to restriction enzyme site file ( Ouput of the commmand generate_site_positions.py )
 - p : path to file with chrom.sizes ( Also Output of the commmand generate_site_positions.py Exept only the first and last columns )
-- z : path to the fasta genome assembly, make sure the output of '''BWA index''' is in the same directory ( Also add the path to the container with ```-B``` )
+- z : path to the fasta genome assembly, make sure the output of ```BWA index``` is in the same directory ( Also add the path to the container with ```-B``` )
 - g : genome ID ( pick a name )
 - S : used to manually contiue a partially completed run of the command refer to the list of options below  :
   > - Use "chimeric" when alignment has finished or to start from previously

@@ -28,7 +28,7 @@ apptainer exec -B $PWD -B /lustre/isaac/scratch/madler5/blue_pandora_seq/Genome_
 **Singularity**
 
 ```
-apptainer exec -B $PWD -B /lustre/isaac/scratch/madler5/blue_pandora_seq/Genome_Assembly/hifiasm/final/ \
+singularity exec -B $PWD -B /lustre/isaac/scratch/madler5/blue_pandora_seq/Genome_Assembly/hifiasm/final/ \
  /lustre/isaac/scratch/madler5/blue_pandora_seq/Genome_Assembly/juice/juicer/Docker/juicer-kasm_latest.sif juicer.sh \
  -y pandora_DpnII.txt \
  -p pandora.chromer.sizes \
